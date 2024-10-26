@@ -28,8 +28,8 @@ const HomePage = () => {
 
 
   return (
-    <div className="min-h-screen bg-background dark p-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="min-h-screen bg-background dark p-8">
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
