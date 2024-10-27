@@ -1,8 +1,7 @@
 import {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
 import PostCard from '@/components/PostCard';
 import { fetchPosts } from '@/utils/api';
-import { Button } from '../components/ui/Button'
+
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -23,8 +22,8 @@ const HomePage = () => {
     getPosts();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
 
 
   return (

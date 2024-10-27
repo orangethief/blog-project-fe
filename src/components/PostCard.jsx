@@ -10,7 +10,6 @@ import { Badge } from '@/components/ui/Badge';
 
 
 const PostCard = ({ post }) => {
-    const previewText = post.content.length > 50 ? post.content.slice(0, 80) + '...' : post.content;
 
     return (
         <Link to={`/post/${post.id}`} className="cursor-pointer transition-transform transform hover:scale-105 duration-500 ease-in-out">

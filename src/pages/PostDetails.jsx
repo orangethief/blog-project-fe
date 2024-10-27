@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/Button';
 import { SquareArrowLeft } from 'lucide-react';
+import EditPostDialog from '@/components/EditPostDialog';
 
 
 const PostDetails = () => {
@@ -35,7 +36,7 @@ const PostDetails = () => {
     }
   };
 
-  if (!post) return <p>Loading...</p>;
+  if (!post) return <div>Loading...</div>;
 
   const firstSentence = getFirstSentence(post.content);
   const formattedDate = formatDate(post.date);
@@ -64,7 +65,7 @@ const PostDetails = () => {
               <CardDescription>{post.content}</CardDescription>
             </CardContent>
             <CardFooter className="flex justify-center space-x-4">
-              <Button>Edit Post</Button>
+              <EditPostDialog post={post}/>
               <Button variant="destructive" onClick={handleDelete}>Delete Post</Button>
             </CardFooter>
           </Card>
