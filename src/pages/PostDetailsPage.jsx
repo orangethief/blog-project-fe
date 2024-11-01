@@ -13,12 +13,14 @@ import {
 import { Button } from '@/components/ui/Button';
 import { SquareArrowLeft } from 'lucide-react';
 import EditPostDialog from '@/components/EditPostDialog';
+import AlertConfirmation from '@/components/AlertConfirmation';
 
 
-const PostDetails = () => {
+const PostDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
 
   useEffect(() => {
     const loadPost = async () => {
@@ -29,11 +31,8 @@ const PostDetails = () => {
   }, [id]);
 
   const handleDelete = async () => {
-    const confirmDelete = window.confirm('Are you sure you want to delete this post?');
-    if (confirmDelete) {
       await deletePost(id);
       navigate('/');
-    }
   };
 
   if (!post) return <div>Loading...</div>;
@@ -66,11 +65,11 @@ const PostDetails = () => {
             </CardContent>
             <CardFooter className="flex justify-center space-x-4">
               <EditPostDialog post={post}/>
-              <Button variant="destructive" onClick={handleDelete}>Delete Post</Button>
+              <AlertConfirmation isOpen={isAlertOpen} onConfirm={handleDelete} onCancel={() => setIsAlertOpen(false)}/>
             </CardFooter>
           </Card>
     </div>
   )
 }
 
-export default PostDetails
+export default PostDetailsPage

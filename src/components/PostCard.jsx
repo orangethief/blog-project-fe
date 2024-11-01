@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         <Link to={`/post/${post.id}`} className="cursor-pointer transition-transform transform hover:scale-105 duration-500 ease-in-out">
           <Card>
             <CardHeader>
-              <CardTitle className="text-xl min-h-[3.5rem] ">{post.title}</CardTitle>
+              <CardTitle className="text-xl min-h-[5.1rem] ">{post.title}</CardTitle>
               <CardDescription className="text-sm">
                 <Badge  className="rounded-md">{post.author}
                 </Badge>

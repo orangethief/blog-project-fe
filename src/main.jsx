@@ -5,7 +5,7 @@ import './index.css'
 import Homepage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import CreatePost from './pages/CreatePost.jsx';
-import PostDetails from './pages/PostDetails.jsx';
+import PostDetailsPage from './pages/PostDetailsPage.jsx';
 import Layout from './components/Layout.jsx';
 
 const router = createBrowserRouter([
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/post/:id',
-      element: <PostDetails />,
+      element: <PostDetailsPage />,
     },
   ],
 },
