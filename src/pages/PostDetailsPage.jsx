@@ -46,7 +46,7 @@ const PostDetailsPage = () => {
     <div className="min-h-screen py-6 bg-background dark text-foreground">
 
           <Card className="border-none">
-            <Link to="/" className="cursor-pointer">
+            <Link to="/" className="cursor-pointer inline-flex">
               <SquareArrowLeft className="text-primary h-12 w-12 ml-6 hover:text-primary/90" />
             </Link>
             <CardHeader className="p-8">

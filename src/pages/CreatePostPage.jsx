@@ -82,8 +82,8 @@ const [author, setAuthor] = useState('');
                 <div className="grid grid-cols-6 items-center gap-4">
                   <p className="col-start-2 col-span-5 text-sm text-muted-foreground">Search <a className="hover:text-foreground underline" href="https://unsplash.com/de/s/fotos/blog?license=free" target="_blank" rel="noopener noreferrer" >Unsplash</a> for your blog foto. </p>
                 </div>
-                <div className="grid grid-cols-6 items-center gap-4">
-                  <Button type="submit" className="col-start-2 col-span-5">Create Post</Button>
+                <div className="flex justify-end">
+                  <Button type="submit">Create Post</Button>
                 </div>
             </div>
       </form>
