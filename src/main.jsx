@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import Homepage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
-import CreatePost from './pages/CreatePost.jsx';
+import CreatePostPage from './pages/CreatePostPage.jsx';
 import PostDetailsPage from './pages/PostDetailsPage.jsx';
 import Layout from './components/Layout.jsx';
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/create',
-      element: <CreatePost />,
+      element: <CreatePostPage />,
     },
     {
       path: '/post/:id',

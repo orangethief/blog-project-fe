@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import PostCard from '@/components/PostCard';
 import { fetchPosts } from '@/utils/api';
+import Spinner from '@/components/Spinner';
 
 
 const HomePage = () => {
@@ -22,7 +23,9 @@ const HomePage = () => {
     getPosts();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="min-h-screen bg-background dark flex justify-center items-center">
+  <Spinner />
+  </div>;
   if (error) return <div>Error: {error.message}</div>;
 
 

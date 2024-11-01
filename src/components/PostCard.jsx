@@ -9,6 +9,7 @@ import {
 import { Badge } from '@/components/ui/Badge';
 
 
+
 const PostCard = ({ post }) => {
 
     return (

@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Button } from '@/components/ui/Button';
+import Spinner from '@/components/Spinner';
 import { SquareArrowLeft } from 'lucide-react';
 import EditPostDialog from '@/components/EditPostDialog';
 import AlertConfirmation from '@/components/AlertConfirmation';
@@ -35,7 +35,9 @@ const PostDetailsPage = () => {
       navigate('/');
   };
 
-  if (!post) return <div>Loading...</div>;
+  if (!post) return <div className="min-h-screen bg-background dark flex justify-center items-center">
+  <Spinner />
+</div>;;
 
   const firstSentence = getFirstSentence(post.content);
   const formattedDate = formatDate(post.date);
