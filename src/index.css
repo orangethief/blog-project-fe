@@ -6,6 +6,13 @@ body {
   font-family: 'Monaco', monospace;
 }
 
+#navigationMenu a.active {
+  color: hsl(var(--foreground));
+  background-color: hsla(20, 14.3%, 4.1%, 0.9);
+  padding: 0.6rem 0 0.45rem 0;
+  border-radius: 0.2rem;
+}
+
 
 @layer base {
   :root {

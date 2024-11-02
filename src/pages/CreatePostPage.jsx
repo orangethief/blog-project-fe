@@ -5,10 +5,12 @@ import { Textarea } from '../components/ui/textarea'
 import { useState } from 'react'
 import { createPost } from '../utils/api'
 import { useNavigate } from 'react-router-dom'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
 
 const CreatePostPage = () => {
 
-const [author, setAuthor] = useState('');
+  const [author, setAuthor] = useState('');
   const [title, setTitle] = useState( '');
   const [content, setContent] = useState('');
   const [cover, setCover] = useState('');
@@ -60,11 +62,13 @@ const [author, setAuthor] = useState('');
                 <Label htmlFor="content" className="text-right pt-3">
                   Content
                 </Label>
-                <Textarea
+                <ReactQuill
                   id="content"
                   placeholder="Your Text"
                   className="col-span-5 lg:min-h-[10vw]"
-                  onChange={(e) => setContent(e.target.value)}
+                  /*onChange={(e) => setContent(e.target.value)} */
+                  onChange={setContent}
+                  value={content}
                 />
               </div>
               <div className="grid grid-cols-6 items-center gap-4">

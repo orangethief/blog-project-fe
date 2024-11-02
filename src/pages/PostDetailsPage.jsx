@@ -51,7 +51,7 @@ const PostDetailsPage = () => {
             </Link>
             <CardHeader className="p-8">
               <CardTitle className="text-4xl text-center font-extrabold uppercase tracking-wider mb-1">{post.title}</CardTitle>
-              <CardDescription className="text-sm text-center">{firstSentence}</CardDescription>
+              <CardDescription className="text-sm text-center">{ firstSentence}</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4">
               <div className="max-h-[25vh] lg:max-h-[50vh] overflow-hidden">
@@ -63,7 +63,7 @@ const PostDetailsPage = () => {
                 <div>Published on {formattedDate}</div>
               </CardDescription>
               <CardDescription className="italic text-bold"></CardDescription>
-              <CardDescription>{post.content}</CardDescription>
+              <CardDescription>{ post.content}</CardDescription>
             </CardContent>
             <CardFooter className="flex justify-center space-x-4">
               <EditPostDialog post={post}/>

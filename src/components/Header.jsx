@@ -9,10 +9,10 @@ const Header = () => {
       <NavLink to="/"><h1 className="text-2xl font-bold italic">RETROVERSE</h1></NavLink>
 
 
-      <NavigationMenu>
+      <NavigationMenu id="navigationMenu">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavLink to="/create">
+            <NavLink to="/create" >
               <Button variant="ghost" className="font-semibold text-xl">CREATE A NEW POST</Button>
             </NavLink>
           </NavigationMenuItem>

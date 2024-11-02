@@ -4,11 +4,12 @@ const Spinner = () => {
   return (
     <Oval
   visible={true}
-  height="120"
-  width="120"
+  height="80"
+  width="80"
   color="#F5D54A"
-  strokeWidth={0.5}
-  strokeWidthSecondary={0.5}
+  secondaryColor='#F5D54A'
+  strokeWidth={1}
+  strokeWidthSecondary={1}
   ariaLabel="oval-loading"
   wrapperStyle={{}}
   wrapperClass=""

@@ -52,8 +52,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-background dark p-8">
-
-      <Select onValueChange={setSortOrder} defaultValue={sortOrder} >
+      <div className="mx-48">
+      <Select onValueChange={setSortOrder} defaultValue={sortOrder}>
         <SelectTrigger className="w-[160px] text-foreground">
           <SelectValue placeholder="Sort by"/>
         </SelectTrigger>
@@ -64,8 +64,9 @@ const HomePage = () => {
           <SelectItem value="Z-A">Z - A by title</SelectItem>
         </SelectContent>
       </Select>
+      </div>
 
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="2xl:mx-44 lg:mx-auto mt-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
       {sortedPosts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
